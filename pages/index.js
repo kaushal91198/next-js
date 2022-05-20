@@ -1,9 +1,14 @@
 import Head from "next/head";
 import Image from "next/image";
+import Link from "next/link";
 import styles from "../styles/Home.module.css";
-import Script from "next/script";
+import styles1 from "../styles/Home1.module.css";
+import styles2 from "../styles/Home2.module.css";
+// import Script from "next/script";
 
 export default function Home() {
+
+  // console.log(styles)
   return (
     <div className={styles.container}>
       <Head>
@@ -16,10 +21,18 @@ export default function Home() {
       <div>
         <nav className={styles.mainNav}>
           <ul>
-            <li>Home</li>
-            <li>About</li>
-            <li>Blog</li>
-            <li>Contact</li>
+            <Link href="/">
+              <a><li>Home</li></a>
+            </Link>
+            <Link href="/about">
+              <a><li>About</li></a>
+            </Link>
+            <Link href="/blog">
+              <a><li>Blog</li></a>
+            </Link>
+            <Link href="/contact">
+              <a><li>Contact</li></a>
+            </Link>
           </ul>
         </nav>
       </div>
@@ -31,7 +44,9 @@ export default function Home() {
           A blog for hunting coders by a hunting coder
         </p>
 
-        <div className="blogs">
+        {/* <div className={`${styles2.con} ${styles1.con}`}> */}
+        {/* <div className={`${styles1.con}`}> */}
+        <div className={`${styles2.con} `}>
           <h2>Popular Blogs</h2>
           <div className="blog">
             <h3>How to learn Javascript in 2022</h3>

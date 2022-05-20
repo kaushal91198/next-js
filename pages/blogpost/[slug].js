@@ -9,4 +9,4 @@ const slug = () => {
   )
 }
 
-export default slug
+export default slug 
