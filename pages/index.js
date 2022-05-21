@@ -33,33 +33,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       {/* <Script src='/sc.js' strategy='lazyOnLoad'></Script> */}
-      <div>
-        <nav className={styles.mainNav}>
-          <ul>
-            <Link href="/">
-              <a>
-                <li>Home</li>
-              </a>
-            </Link>
-            <Link href="/about">
-              <a>
-                <li>About</li>
-              </a>
-            </Link>
-            <Link href="/blog">
-              <a>
-                <li>Blog</li>
-              </a>
-            </Link>
-            <Link href="/contact">
-              <a>
-                <li>Contact</li>
-              </a>
-            </Link>
-          </ul>
-        </nav>
-      </div>
-
+    
       <main className={styles.main}>
         <h1 className={styles.title}>
           {/* <span className="mySpan dummy ">Hunting Coder</span> */}
@@ -84,6 +58,18 @@ export default function Home() {
         {/* <div className={`${styles2.con} `}> */}
         <div>
           <h2>Popular Blogs</h2>
+          <div className="blog">
+            <h3>How to learn Javascript in 2022</h3>
+            <p>Javascript is the language used to design logic for the web.</p>
+          </div>
+          <div className="blog">
+            <h3>How to learn Javascript in 2022</h3>
+            <p>Javascript is the language used to design logic for the web.</p>
+          </div>
+          <div className="blog">
+            <h3>How to learn Javascript in 2022</h3>
+            <p>Javascript is the language used to design logic for the web.</p>
+          </div>
           <div className="blog">
             <h3>How to learn Javascript in 2022</h3>
             <p>Javascript is the language used to design logic for the web.</p>
