@@ -12,7 +12,6 @@ const Blog = () => {
     console.log("useEffect is running.");
     fetch("http://localhost:3000/api/blog")
       .then((data) => {
-        console.log(data);
         return data.json();
       }) // return promise
       .then((parsedData) => {
@@ -30,6 +29,7 @@ const Blog = () => {
             <>
               <Link href={`/blogpost/${x.slug}`} key={x.slug}>
                 <h3 className={styles.blogItemh3}>{x.title}</h3>
+
               </Link>
               <p className={styles.blogItemp}>{x.content.substr(0, 400)}</p>
             </>
