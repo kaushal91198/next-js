@@ -9,13 +9,12 @@ import { useEffect, useState } from "react";
 const Blog = () => {
   const [blogs, setBlogs] = useState([]);
   useEffect(() => {
-    console.log("useEffect is running.");
     fetch("http://localhost:3000/api/blog")
       .then((data) => {
         return data.json();
       }) // return promise
       .then((parsedData) => {
-        console.log(parsedData);
+        // console.log(parsedData);
         setBlogs(parsedData);
       }) //parsing data
       .catch();
