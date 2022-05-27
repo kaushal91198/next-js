@@ -6,19 +6,20 @@ import { useEffect, useState } from "react";
 //Step-2 -> Iterate thorugh the and Display them
 //Step-3 -> Collect all the files from blog Data directory.
 
-const Blog = () => {
-  const [blogs, setBlogs] = useState([]);
-  useEffect(() => {
-    fetch("http://localhost:3000/api/blog")
-      .then((data) => {
-        return data.json();
-      }) // return promise
-      .then((parsedData) => {
-        // console.log(parsedData);
-        setBlogs(parsedData);
-      }) //parsing data
-      .catch();
-  }, []);
+const Blog = (props) => {
+  // console.log(props)
+  const [blogs, setBlogs] = useState(props.allBlogs);
+  // useEffect(() => {
+  //   fetch("http://localhost:3000/api/blog")
+  //     .then((data) => {
+  //       return data.json();
+  //     }) // return promise
+  //     .then((parsedData) => {
+  //       // console.log(parsedData);
+  //       setBlogs(parsedData);
+  //     }) //parsing data
+  //     .catch();
+  // }, []);
   return (
     <div className={styles.container}>
       <main className={styles.main}>
@@ -30,7 +31,7 @@ const Blog = () => {
                 <h3 className={styles.blogItemh3}>{x.title}</h3>
 
               </Link>
-              <p className={styles.blogItemp}>{x.content.substr(0, 400)}</p>
+              <p className={styles.blogItemp}>{x.description.substr(0, 400)}</p>
             </>
           );
         })}
@@ -38,5 +39,47 @@ const Blog = () => {
     </div>
   );
 };
+// // by server side rendering
+// export async function getServerSideProps(context) {
+//   return {
+//     props: { kaushal: "Good Boy" }, // will be passed to the page component as props
+//   }
+// } 
+
+
+//by server side rendering
+export async function getServerSideProps(context) {
+  let data = await fetch("http://localhost:3000/api/blog")
+  let allBlogs = await data.json()
+
+  return {
+    props: { allBlogs }, // will be passed to the page component as props
+  }
+}
+
+
+// // by static side generation - get static paths
+
+// export async function getStaticPaths() {
+//   return {
+//     paths: [
+//       { params: { slug: 'how-to-learn-flask.json' } },
+//       { params: { slug: 'how-to-learn-javascript.json' } },
+//       { params: { slug: 'how-to-learn-nextjs.json' } },
+//     ],
+//     fallback: true // false or 'blocking'
+//   };
+// }
+
+
+// // //by static side generation- get static props
+// export async function getStaticProps(context) {
+//   return {
+//     props: {}, // will be passed to the page component as props
+//   }
+// }
+
+
+
 
 export default Blog;
