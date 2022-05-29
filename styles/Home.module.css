@@ -43,7 +43,7 @@
 .title {
   margin: 0;
   line-height: 1.15;
-  font-size: 4rem;
+  font-size: 1.5rem;
 }
 
 .title,
@@ -54,7 +54,8 @@
 .description {
   /* margin: 4rem 0; */
   line-height: 1.5;
-  font-size: 1.5rem;
+  font-size: 1rem;
+  max-width: 50vw;
 }
 
 .code {
@@ -122,12 +123,41 @@
 }
 
 .myImg {
-  border-radius: 10px;
+  width: 157px;
+  border-radius: 92px;
 }
-.imgWrap{
-  padding: 30px 0px;
+
+.imgWrap {
+  padding: 15px 0px;
 
 }
+
+.h2 {
+  font-size: 2.5rem;
+}
+
+.h3 {
+  font-size: 1.75rem;
+  margin-top: 0px;
+  margin-bottom: 11px;
+
+}
+
+.btn {
+  color: white;
+  background: black;
+  padding: 7px 6px;
+  cursor: pointer;
+  border-radius: 6px;
+  font-size: 12px;
+  margin-bottom: 1px;
+}
+
+.p {
+  margin: 16px 0;
+  margin-top: 3px ;
+}
+
 
 @media (max-width: 600px) {
   .grid {
