@@ -47,7 +47,7 @@ export default function Home() {
             width={237}
             height={158}
           /> */}
-          <img className={styles.myImg} src="homeImg.avif" alt="hunting coder" width={237}  height={158} />
+          <img className={styles.myImg} src="homeImg.avif" alt="hunting coder" width={237} height={158} />
         </div>
 
         {/* <p className={styles.description}>
@@ -62,18 +62,24 @@ export default function Home() {
           <div >
             <h3 className={styles.h3}>How to learn Javascript in 2022</h3>
             <p className={styles.p}>Javascript is the language used to design logic for the web.</p>
-            <button className={styles.btn}>Read More</button>
+            <Link href={`/blogpost/how-to-learn-javascript.json`} >
+              <button className={styles.btn}>Read More</button>
+            </Link>
           </div>
           <div >
-            <h3 className={styles.h3}>How to learn Javascript in 2022</h3>
-            <p className={styles.p}>Javascript is the language used to design logic for the web.</p>
-            <button className={styles.btn}>Read More</button>
-          </div>
+            <h3 className={styles.h3}>How to learn Flask in 2022</h3>
+            <p className={styles.p}>Flask is a micro web framework written in Python.</p>
+            <Link href={`/blogpost/how-to-learn-flask.json`} >
+              <button className={styles.btn}>Read More</button>
+            </Link>          </div>
           <div >
-            <h3 className={styles.h3}>How to learn Javascript in 2022</h3>
-            <p className={styles.p}>Javascript is the language used to design logic for the web.</p>
-            <button className={styles.btn}>Read More</button>
-          </div>
+            <h3 className={styles.h3}>How to learn Next Js in 2022</h3>
+            <p className={styles.p}>Next.js is a minimalistic framework for server-rendered React applications as well as statically exported React apps.
+
+              .</p>
+            <Link href={`/blogpost/how-to-learn-nextjs.json`} >
+              <button className={styles.btn}>Read More</button>
+            </Link>          </div>
         </div>
       </main>
     </div>

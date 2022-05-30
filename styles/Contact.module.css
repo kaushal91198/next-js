@@ -33,3 +33,12 @@
     font-size: 12px;
     margin-bottom: 1px;
   }
+
+  @media (max-width: 600px) {
+    .container {
+        max-width: 88vw;
+        margin: auto;
+    }
+
+
+}
